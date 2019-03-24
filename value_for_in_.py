@@ -16,4 +16,5 @@
 	
 # (高效方法只需要两行) 先找到当前种群最小fit_value
     min_fit_value = min(fit_value)
-    fit_value = [(i - min_fit_value) for i in fit_value]
+    if min_fit_value < 0:
+    	fit_value = [(i - min_fit_value) for i in fit_value]
